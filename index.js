@@ -3,6 +3,8 @@ const router = require('./auth-router/auth-router');
 
 const app = express();
 
+app.use(express.json());
+
 app.use("/", router);
 
 app.get("/", (req, res) => {
